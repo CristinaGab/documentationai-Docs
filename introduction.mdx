@@ -1,0 +1,108 @@
+---
+title: Welcome to Cristina Gabriela Raileanu Documentation
+description: An overview of the documentation space designed for organizing and managing project documentation, including key features and getting started tips.
+---
+
+## Overview
+
+Welcome to your centralized documentation space for Cristina Gabriela Raileanu's projects. You organize all project notes, guides, and references here in a structured, searchable format. This platform supports Markdown, MDX components, and version control integration to keep your documentation up-to-date and collaborative.
+
+<Columns cols={3}>
+  <Card title="Structured Organization" icon="layers" href="/docs/organization">
+    Group content into folders, tags, and hierarchies for easy navigation.
+  </Card>
+  <Card title="Rich Components" icon="components" href="/docs/components">
+    Use interactive elements like tabs, steps, and diagrams to enhance readability.
+  </Card>
+  <Card title="Version History" icon="git-branch" href="/docs/changelog">
+    Track changes with built-in versioning and changelog support.
+  </Card>
+</Columns>
+
+## Purpose and Benefits
+
+You use this documentation space to streamline project management. Centralize knowledge to reduce onboarding time for team members, ensure consistency across deliverables, and maintain a single source of truth.
+
+<Callout kind="tip">
+  Benefits include faster searches with full-text indexing, collaborative editing, and export options to PDF or HTML.
+</Callout>
+
+| Feature | Benefit |
+|---------|---------|
+| Searchable content | Find information in seconds across all pages |
+| Custom components | Create engaging, interactive docs |
+| Brand consistency | Apply your brand color `#3B82F6` everywhere |
+| Export capabilities | Share docs offline or integrate with tools |
+
+## Brand Guidelines
+
+Maintain a professional look with the primary brand color `#3B82F6`. Apply it to headings, links, and accents for visual unity.
+
+<Expandable title="Advanced Brand Config" default-open="false">
+
+Configure your theme in the settings file:
+
+<CodeGroup tabs="JSON,YAML">
+```json
+{
+  "theme": {
+    "primaryColor": "#3B82F6",
+    "headings": {
+      "color": "#3B82F6"
+    }
+  }
+}
+```
+
+```yaml
+theme:
+  primaryColor: "#3B82F6"
+  headings:
+    color: "#3B82F6"
+```
+</CodeGroup>
+
+</Expandable>
+
+## Initial Setup
+
+Get started quickly with these steps. You complete setup in under five minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://app.raileanu-docs.com` with your email.
+  </Step>
+  <Step title="Import Project" icon="upload">
+    Connect your GitHub repo or upload initial files.
+  </Step>
+  <Step title="Customize Theme" icon="palette">
+    Set your brand color to `#3B82F6` in project settings.
+  </Step>
+  <Step title="Add First Page" icon="file-plus">
+    Create `introduction.mdx` with frontmatter and H2 headings.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="CLI Setup" icon="terminal">
+    Install and initialize:
+
+    ```bash
+    npm install -g raileanu-docs-cli
+    raileanu-docs init my-project
+    ```
+  </Tab>
+  <Tab title="Web UI" icon="globe">
+    Use the dashboard:
+
+    1. Log in to the web app.
+    2. Select "New Space".
+    3. Enter project details.
+  </Tab>
+</Tabs>
+
+<Callout kind="success">
+  Your docs now live at `https://docs.raileanu.com/my-project`. Share the link with your team.
+</Callout>
+
+This setup empowers you to manage complex projects efficiently while showcasing your brand identity. Explore sidebars for navigation and use search for quick access.

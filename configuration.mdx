@@ -1,0 +1,141 @@
+---
+title: Configuration Options
+description: Learn how to customize your documentation space with themes, settings, and brand elements to match your needs.
+---
+
+## Overview
+
+Customize Cristina Gabriela Raileanu Documentation to fit your project. Set your brand color like `#3B82F6`, manage user permissions, configure the sidebar, and handle exports. Start with simple changes in your config file.
+
+<Columns cols={3}>
+  <Card title="Brand Themes" icon="palette" href="#brand-themes">
+    Apply colors and styles.
+  </Card>
+  <Card title="User Permissions" icon="users" href="#user-permissions">
+    Control access levels.
+  </Card>
+  <Card title="Navigation Setup" icon="menu" href="#navigation">
+    Customize sidebar and menus.
+  </Card>
+</Columns>
+
+## Brand Colors and Themes
+
+Set your primary brand color and theme options in the `config.yaml` file.
+
+<Steps>
+  <Step title="Edit Config File" icon="edit-3">
+    Open `docs/config.yaml` in your editor.
+  </Step>
+  <Step title="Add Brand Color" icon="palette">
+    Set the `brandColor` field.
+
+    <CodeGroup tabs="YAML,JSON">
+      ```yaml
+      theme:
+        brandColor: "#3B82F6"
+        primaryFont: "Inter"
+      ```
+      ```json
+      {
+        "theme": {
+          "brandColor": "#3B82F6",
+          "primaryFont": "Inter"
+        }
+      }
+      ```
+    </CodeGroup>
+  </Step>
+  <Step title="Apply Changes" icon="refresh-cw">
+    Restart your dev server with `npm run dev`.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use hex colors like `#3B82F6` for best results. Test in light and dark modes.
+</Callout>
+
+## User Access and Permissions
+
+Manage who views and edits your docs. Define roles in the permissions section.
+
+<Tabs>
+  <Tab title="Admin" icon="shield">
+    Full access: edit pages, manage users, export all.
+
+    ```yaml
+    permissions:
+      - role: admin
+        users: ["cristina@example.com"]
+        access: ["read", "write", "admin"]
+    ```
+  </Tab>
+  <Tab title="Editor" icon="edit">
+    Edit content but no user management.
+
+    ```yaml
+    permissions:
+      - role: editor
+        users: ["team@example.com"]
+        access: ["read", "write"]
+    ```
+  </Tab>
+  <Tab title="Viewer" icon="eye">
+    Read-only access.
+
+    ```yaml
+    permissions:
+      - role: viewer
+        users: ["guest@example.com"]
+        access: ["read"]
+    ```
+  </Tab>
+</Tabs>
+
+<Callout kind="alert">
+  Always review permissions before sharing publicly to avoid unauthorized edits.
+</Callout>
+
+## Navigation and Sidebar Configuration
+
+Tailor the sidebar to your content structure.
+
+<Expandable title="Advanced Sidebar Options" default-open="false">
+  Use nested menus for complex docs.
+
+  ```yaml
+  navigation:
+    - title: "Getting Started"
+      href: "/docs/intro"
+    - title: "API Reference"
+      items:
+        - title: "Endpoints"
+          href: "/docs/api/endpoints"
+        - title: "Authentication"
+          href: "/docs/api/auth"
+  ```
+</Expandable>
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `collapsed` | Auto-collapse sidebar | `false` |
+| `groupBy` | Group by categories | `tags` |
+| `search` | Enable global search | `true` |
+
+## Exporting and Backup Options
+
+Export your docs to static sites or PDF.
+
+<Steps>
+  <Step title="Static Export" icon="download">
+    Run `npm run build` to generate HTML files in `dist/`.
+  </Step>
+  <Step title="PDF Backup" icon="file-text">
+    Use `npm run export:pdf` for printable versions.
+  </Step>
+  <Step title="Git Backup" icon="git-branch">
+    Push changes: `git add . && git commit -m "Update docs" && git push`.
+  </Step>
+</Steps>
+
+Regular backups prevent data loss. Schedule exports weekly for production sites.

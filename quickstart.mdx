@@ -1,0 +1,154 @@
+---
+title: Quickstart Guide
+description: A step-by-step guide to set up your first documentation project and start creating content quickly.
+---
+
+## Overview
+
+Get started with Cristina Gabriela Raileanu Documentation in minutes. Follow these steps to create your first documentation space, add pages, navigate the interface, and import content. This guide assumes you have an account and are logged in.
+
+<Callout kind="tip">
+  Bookmark your dashboard for quick access. Use the search bar to find pages instantly.
+</Callout>
+
+## Create Your First Documentation Space
+
+Set up a new space to organize your project docs.
+
+<Steps>
+  <Step title="Sign In and Navigate" icon="log-in">
+    Access your dashboard at `https://app.raileanu-docs.com/dashboard`.
+    
+    Click **New Space** in the top-right corner.
+  </Step>
+  
+  <Step title="Configure Space" icon="settings">
+    Enter a name like `My Project Docs`.
+    
+    Select **Public** or **Private** visibility.
+    
+    Choose brand color `#3B82F6` for your theme.
+  </Step>
+  
+  <Step title="Publish Space" icon="rocket">
+    Click **Create Space**. Your space appears in the sidebar.
+    
+    Add a description: "Welcome to my project documentation."
+  </Step>
+</Steps>
+
+## Add and Edit Pages
+
+Create content using the intuitive editor.
+
+<Tabs>
+  <Tab title="New Page" icon="plus">
+    In your space, click **New Page**.
+    
+    Title it "Introduction".
+    
+    Use the MDX editor to add headings, code blocks, and components.
+    
+    Preview changes live, then **Publish**.
+  </Tab>
+  
+  <Tab title="Edit Existing" icon="edit">
+    Hover over a page in the sidebar and click the pencil icon.
+    
+    Make changes like updating frontmatter:
+    
+````mdx
+```yaml
+---
+title: Updated Page
+description: New description here.
+---
+```
+````
+    
+    Save and republish.
+  </Tab>
+</Tabs>
+
+## Interface Tour
+
+Familiarize yourself with key areas.
+
+| Section       | Description                          | Shortcut |
+|---------------|--------------------------------------|----------|
+| Sidebar       | Manage spaces and pages              | `Cmd+B` |
+| Editor        | Write MDX with live preview          | Split view toggle |
+| Preview       | See published look                   | `Cmd+P` |
+| Settings      | Configure themes, SEO, navigation    | Gear icon |
+
+<Columns cols={2}>
+  <Card title="Navigation Tips" icon="menu" href="/docs/navigation">
+    Learn advanced sidebar customization.
+  </Card>
+  
+  <Card title="Themes" icon="palette" href="/docs/themes">
+    Customize with your brand color `#3B82F6`.
+  </Card>
+</Columns>
+
+## Import Existing Content
+
+Bring in Markdown or MDX files seamlessly.
+
+<CodeGroup tabs="CLI,Drag-and-Drop">
+  ```bash
+  # Install CLI tool
+  npm install -g raileanu-docs-cli
+  
+  # Login
+  raileanu-docs login
+  
+  # Import directory
+  raileanu-docs import ./my-docs-folder --space="My Project Docs"
+  ```
+  
+  ```md
+  Drag your `docs/` folder directly into the space import area.
+  
+  Supports `.md`, `.mdx` files with frontmatter.
+  
+  Automatic hierarchy from folder structure.
+  ```
+</CodeGroup>
+
+<Callout kind="info">
+  Imported pages retain YAML frontmatter and code syntax highlighting.
+</Callout>
+
+<ExpandableGroup>
+  <Expandable title="Advanced Import Options" default-open="false">
+    Use `--recursive` flag for nested folders.
+    
+    Example:
+    ```bash
+    raileanu-docs import ./src/docs --space="My Project" --recursive=true
+    ```
+    
+    Review imports in the activity log.
+  </Expandable>
+</ExpandableGroup>
+
+## Next Steps
+
+Explore more features to enhance your docs.
+
+<Columns cols={3}>
+  <Card title="Components" icon="puzzle" href="/docs/components">
+    Add interactive elements like Steps and Tabs.
+  </Card>
+  
+  <Card title="SEO & Analytics" icon="trending-up" href="/docs/seo">
+    Optimize for search engines.
+  </Card>
+  
+  <Card title="Collaboration" icon="users" href="/docs/teams">
+    Invite team members.
+  </Card>
+</Columns>
+
+Congratulations! You now have a fully functional documentation site. Start writing and share your space URL with your team.

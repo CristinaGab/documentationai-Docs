@@ -1,0 +1,157 @@
+---
+title: Changelog
+description: Track the latest updates, features, and improvements to the Cristina Gabriela Raileanu Documentation platform.
+---
+
+## Recent Updates
+
+You stay informed about all changes to the Cristina Gabriela Raileanu Documentation platform through this changelog. Review the latest releases below, including new features, bug fixes, and improvements. Each version includes detailed notes on what you gain.
+
+<Callout kind="info">
+  Subscribe to the RSS feed at `/rss.xml` to receive automatic notifications for new releases.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for custom brand colors, like `#3B82F6`, in your documentation themes
+- Introduced expandable FAQ sections for better user experience
+
+## Improvements
+
+- Enhanced search performance by `>30%` for large documentation sites
+- Optimized image loading with lazy loading for faster page renders
+
+## Bug Fixes
+
+- Fixed heading hierarchy issues in generated MDX pages
+- Resolved special character escaping in prose text
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated multi-language code examples with `<CodeGroup>` components
+- Added `<Tabs>` for platform-specific installation guides
+
+## Bug Fixes
+
+- Corrected Mermaid diagram rendering as code blocks, not components
+- Patched JSX attribute parsing for double quotes and proper escaping
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched core MDX generation with YAML frontmatter validation
+- Enabled 15+ components including `<Steps>`, `<Columns>`, and `<Callout>`
+
+## Breaking Changes
+
+- Removed H1 headings from body content; use frontmatter titles only
+
+## Initial Setup
+
+- Full support for documentation workflows with realistic code examples
+
+</Update>
+
+## Upcoming Roadmap
+
+Discover planned enhancements that improve your documentation experience.
+
+<Columns cols={3}>
+
+<Card title="Advanced Search" icon="search" href="/docs/search">
+
+  AI-powered semantic search across all pages.
+
+</Card>
+
+<Card title="Collaboration Tools" icon="users" href="/docs/collaboration">
+
+  Real-time editing and version history.
+
+</Card>
+
+<Card title="Analytics Dashboard" icon="bar-chart-3" href="/docs/analytics">
+
+  Track page views and user engagement.
+
+</Card>
+
+</Columns>
+
+## Stay Updated
+
+Follow these steps to ensure you never miss an update.
+
+<Steps>
+
+  <Step title="Subscribe to RSS" icon="rss">
+
+    Add the feed URL to your reader:
+
+````xml
+<link rel="alternate" type="application/rss+xml" title="Changelog" href="https://your-site.com/rss.xml">
+````
+
+  </Step>
+
+  <Step title="GitHub Notifications" icon="github">
+
+    Watch the repository for release alerts.
+
+  </Step>
+
+  <Step title="Email Signup" icon="mail">
+
+    Join the newsletter at `/subscribe`.
+
+  </Step>
+
+</Steps>
+
+<Tabs>
+
+  <Tab title="npm" icon="package">
+
+    Check for updates:
+
+```bash
+npm outdated @cristina-docs/core
+npm update @cristina-docs/core
+```
+
+  </Tab>
+
+  <Tab title="CLI" icon="terminal">
+
+    Use the update command:
+
+```bash
+cristina-docs update --check
+```
+
+  </Tab>
+
+</Tabs>
+
+<Expandable title="Detailed Migration Guide" default-open="false">
+
+  When upgrading from v1.0.0 to v1.2.0, update your config:
+
+```javascript
+// config.js
+module.exports = {
+  brandColor: '#3B82F6',
+  escapeSpecialChars: true, // New option
+};
+```
+
+</Expandable>
